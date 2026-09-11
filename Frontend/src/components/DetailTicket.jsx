@@ -45,7 +45,7 @@ export default function DetailTicket(){
         })
         toast.success("Status updated successfully")
       }else{
-        toast.error(responseData.error || "Unable to update status")
+        toast.error(data.error || "Unable to update status")
         console.log("error in status change",data)
       }
      
