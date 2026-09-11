@@ -1,0 +1,14 @@
+# Go database
+ticket_system.db
+data/
+
+# React
+Frontend/node_modules/
+Frontend/dist/
+
+# Environment files
+.env
+Frontend/.env
+
+# OS files
+.DS_Store
