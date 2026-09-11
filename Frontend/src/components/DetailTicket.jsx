@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom"
 import {url} from "../utility/Url"
 import { useEffect, useState } from "react"
+import { ToastContainer, toast } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 export default function DetailTicket(){
     const {id} =useParams()
@@ -41,7 +43,9 @@ export default function DetailTicket(){
         setData({
             ...data,status:newStatus
         })
+        toast.success("Status updated successfully")
       }else{
+        toast.error(responseData.error || "Unable to update status")
         console.log("error in status change",data)
       }
      
@@ -146,7 +150,7 @@ export default function DetailTicket(){
         </div>
 
     </div>
-
+<ToastContainer />
 </div>
     )
 }
