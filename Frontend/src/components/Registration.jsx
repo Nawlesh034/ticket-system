@@ -36,6 +36,7 @@ export default function Registration(){
             console.log(data,"nawlesh")
             if(response.ok){
                  toast.success("Registration successful!")
+                 navigate("/login")
                 console.log("data send successfully")
             }else{
                 console.log("error ")
